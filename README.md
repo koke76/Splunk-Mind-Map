@@ -1,55 +1,35 @@
-# Splunk Mind Map – Commands & Event IDs
+# Splunk Interactive Mind Map
 
-```mermaid
-mindmap
-  root((Splunk))
-    Usage
-      Search
-        index_main
-        sourcetype_WinEventLog_Security
-        host_PC001
-        source_WinEventLog_Security
-      Operators
-        AND
-        OR
-        NOT
-        PIPE
-    Commands
-      stats
-        count
-        avg
-        max
-        min
-      table
-      sort
-      top
-      rare
-      rex
-      fields
-    Event_IDs
-      Authentication
-        4624_Successful_logon
-        4625_Failed_logon
-        4634_Logoff
-        4647_User_logoff
-        4672_Special_privileges
-      User_Accounts
-        4720_New_user_created
-        4722_User_enabled
-        4723_Password_change
-        4724_Password_reset
-        4725_User_disabled
-        4726_User_deleted
-        4732_User_added_group
-        4733_User_removed_group
-      Processes
-        4688_Process_created
-        4689_Process_ended
-        4697_Service_installed
-      Resources
-        4656_Object_handle_requested
-        4663_File_accessed
-        4670_Permissions_changed
-      Network
-        5156_Firewall_allowed
-        5158_Firewall_blocked
+This is an **interactive Splunk mind map** designed for SOC analysts, cybersecurity enthusiasts, and anyone working with Splunk.  
+
+During SOC challenges or daily monitoring tasks, it’s easy to get lost with multiple browser tabs searching for Event IDs and example queries. This tool solves that problem by providing a **centralized, clickable reference**.
+
+## Features
+
+- **Event IDs with definitions**: Click on an Event ID to see its description.  
+- **Ready-to-use Splunk commands**: Each Event ID shows an example query you can use immediately.  
+- **Organized layout**: Commands, Event IDs, and usage tips are color-coded and structured for quick reference.  
+- **Interactive**: Drag nodes around, explore the mind map visually.  
+
+## How to Use
+
+1. **Download or clone this repository**.  
+2. Open `splunk-mindmap.html` in any modern web browser.  
+3. Click on nodes to view definitions and example commands.  
+4. Drag and arrange nodes if needed for clarity.  
+
+## Screenshot
+
+![Mind Map Screenshot](screenshot.png)  <!-- Optional: add a screenshot image -->
+
+## Why I Made This
+
+As a SOC analyst or when doing challenges on platforms like HackTheBox or CyberDefenders, I often wasted time searching Google for Splunk queries with 100+ tabs open. This mind map helps me **work efficiently and focus on analysis instead of searching**.
+
+## Contributing
+
+Feel free to **add more Event IDs, commands, or use cases**! Pull requests are welcome.  
+
+## License
+
+MIT License
