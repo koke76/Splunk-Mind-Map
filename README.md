@@ -17,10 +17,7 @@ During SOC challenges or daily monitoring tasks, it’s easy to get lost with mu
 2. Open `splunk-mindmap.html` in any modern web browser.  
 3. Click on nodes to view definitions and example commands.  
 4. Drag and arrange nodes if needed for clarity.  
-
-## Screenshot
-
-![Mind Map Screenshot](screenshot.png)  <!-- Optional: add a screenshot image -->
+  <!-- Optional: add a screenshot image -->
 
 ## Why I Made This
 
