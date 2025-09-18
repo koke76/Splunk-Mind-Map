@@ -1,61 +1,55 @@
-# 🧠 Splunk Mind Map – Commands & Event IDs
+# Splunk Mind Map – Commands & Event IDs
 
 ```mermaid
 mindmap
   root((Splunk))
     Usage
       Search
-        "index=main"
-        "sourcetype=WinEventLog:Security"
-        "host=PC-001"
-        "source=WinEventLog:Security"
+        index_main
+        sourcetype_WinEventLog_Security
+        host_PC001
+        source_WinEventLog_Security
       Operators
-        "AND - All conditions must be true"
-        "OR - At least one condition must be true"
-        "NOT - Exclude a term or value"
-        "Pipe | - Chain multiple commands"
+        AND
+        OR
+        NOT
+        PIPE
     Commands
-      stats - Aggregate and calculate values
-        "count - Total number of events"
-        "avg - Average of a numeric field"
-        "max - Maximum value"
-        "min - Minimum value"
-      "table - Create a table with specific columns"
-      "sort - Sort results (asc/desc)"
-      "top - Show the most frequent values"
-      "rare - Show the least frequent values"
-      "rex - Extract patterns using Regex"
-      "fields - Include or exclude specific fields"
-    Windows Event ID
+      stats
+        count
+        avg
+        max
+        min
+      table
+      sort
+      top
+      rare
+      rex
+      fields
+    Event_IDs
       Authentication
-        "4624 - Successful logon"
-        "4625 - Failed logon"
-        "4634 - Logoff"
-        "4647 - User-initiated logoff"
-        "4672 - Special privileges assigned to new logon"
-      User Accounts
-        "4720 - New user account created"
-        "4722 - User account enabled"
-        "4723 - Password change attempt"
-        "4724 - Password reset attempt"
-        "4725 - User account disabled"
-        "4726 - User account deleted"
-        "4732 - User added to a group"
-        "4733 - User removed from a group"
-      Processes & Applications
-        "4688 - New process created"
-        "4689 - Process exited"
-        "4697 - New service installed"
-      Resources & Access
-        "4656 - Handle requested for an object"
-        "4663 - File or folder accessed"
-        "4670 - Permissions on object changed"
+        4624_Successful_logon
+        4625_Failed_logon
+        4634_Logoff
+        4647_User_logoff
+        4672_Special_privileges
+      User_Accounts
+        4720_New_user_created
+        4722_User_enabled
+        4723_Password_change
+        4724_Password_reset
+        4725_User_disabled
+        4726_User_deleted
+        4732_User_added_group
+        4733_User_removed_group
+      Processes
+        4688_Process_created
+        4689_Process_ended
+        4697_Service_installed
+      Resources
+        4656_Object_handle_requested
+        4663_File_accessed
+        4670_Permissions_changed
       Network
-        "5156 - Network connection allowed (Firewall)"
-        "5158 - Network connection blocked (Firewall)"
-    Use Cases
-      "Brute force detection → index=wineventlog EventCode=4625 | stats count by Account_Name"
-      "New accounts created → EventCode=4720 | table Account_Name, Hostname"
-      "Privilege escalation detection → EventCode=4672 | stats count by Account_Name"
-      "New services installed → EventCode=4697 | table Service_Name, Account_Name"
-      "Admin group changes → EventCode=4732 | table Group_Name, Account_Name"
+        5156_Firewall_allowed
+        5158_Firewall_blocked
