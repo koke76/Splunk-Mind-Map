@@ -1,5 +1,6 @@
-# Splunk-Mind-Map
+# 🧠 Splunk Mind Map – Commands & Event IDs
 
+```mermaid
 mindmap
   root((Splunk))
     Usage
@@ -44,22 +45,4 @@ mindmap
       Processes & Applications
         4688 : New process created
         4689 : Process exited
-        4697 : New service installed
-      Resources & Access
-        4656 : Handle requested for an object
-        4663 : File or folder accessed
-        4670 : Permissions on object changed
-      Network
-        5156 : Network connection allowed (Firewall)
-        5158 : Network connection blocked (Firewall)
-    Use Cases
-      Brute force detection
-        Search : index=wineventlog EventCode=4625 | stats count by Account_Name
-      New accounts created
-        Search : EventCode=4720 | table Account_Name, Hostname
-      Privilege escalation detection
-        Search : EventCode=4672 | stats count by Account_Name
-      List of new services installed
-        Search : EventCode=4697 | table Service_Name, Account_Name
-      Detect admin group changes
-        Search : EventCode=4732 | table Group_Name, Account_Name
+        4697 : New serv
